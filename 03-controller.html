@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>angularjs应用</title>
+		
+	</head>
+<body ng-app = "myModule" ng-controller = "HelloController">
+	<script src="node_modules/angular/angular.js"></script>
+	<script >
+	var module = angular.module('myModule',[]);
+	module.controller('HelloController',['$scope',function ($scope) {
+		console.log($scope);
+	}])
+	</script>
+    
+</body>
+</html>

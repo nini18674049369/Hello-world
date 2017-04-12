@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>angular模块</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div ng-app = "myApp" ng-controller = "DemoController">
+	    <h1>使用NG实现双边数据绑定</h1>
+	    <p><input type="text" placeholder="请输入你的名字" ng-model="user.name"></p>
+	    </body>
+	    </html>
+	    <p>hello <strong>{{user.name}}</strong></p>
+	    <input type="button"  value = "提交" ng-click="show()">
+		
+    </div>
+
+
+		<script src = "node_modules/angular/angular.js"></script>
+		<script >
+			var app = angular.module('myApp',[]);
+			app.controller('DemoController',function ($scope) {
+					$scope.user={};
+					$scope.user.name='张三';
+					$scope.show = function () {
+						console.log($scope.user);
+					}
+			});
+		</script>
+
+</body>
+</html>
